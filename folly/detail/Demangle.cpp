@@ -29,6 +29,8 @@
 namespace folly {
 namespace detail {
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-parameter"
 int cplus_demangle_v3_callback_wrapper(
     char const* const mangled,
     void (*const cbref)(char const*, std::size_t, void*),
@@ -40,6 +42,7 @@ int cplus_demangle_v3_callback_wrapper(
   return 0;
 #endif
 }
+#pragma clang diagnostic pop
 
 } // namespace detail
 } // namespace folly
